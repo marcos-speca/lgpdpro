@@ -23,7 +23,8 @@ function SmartWizard(target, options) {
     this.buttons = {
         next : $('<a>'+options.labelNext+'</a>').attr("href","#").addClass("buttonNext"),
         previous : $('<a>'+options.labelPrevious+'</a>').attr("href","#").addClass("buttonPrevious"),
-        finish  : $('<a>'+options.labelFinish+'</a>').attr("href","#").addClass("buttonFinish")
+        finish  : $('<a>'+options.labelFinish+'</a>').attr("href","#").addClass("buttonFinish"),
+        start  : $('<a>'+options.labelStart+'</a>').attr("href","#").addClass("buttonNext")
     };
 
     /*
@@ -52,7 +53,8 @@ function SmartWizard(target, options) {
         $this.elmStepContainer.append(allDivs);
         elmActionBar.append($this.loader);
         $this.target.append($this.elmStepContainer);
-        elmActionBar.append($this.buttons.finish)
+        elmActionBar.append($this.buttons.start)
+                    .append($this.buttons.finish)
                     .append($this.buttons.next)
                     .append($this.buttons.previous);
         $this.target.append(elmActionBar);
@@ -429,21 +431,22 @@ $.fn.smartWizard = function(method) {
 $.fn.smartWizard.defaults = {
     selected: 0,  // Selected Step, 0 = first step
     keyNavigation: true, // Enable/Disable key navigation(left and right keys are used if enabled)
-    enableAllSteps: false,
+    enableAllSteps: true,
     transitionEffect: 'slide', // Effect on navigation, none/fade/slide/slideleft
     contentURL:null, // content url, Enables Ajax content loading
     contentCache:true, // cache step contents, if false content is fetched always from ajax url
     cycleSteps: false, // cycle step navigation
-    enableFinishButton: false, // make finish button enabled always
+    enableFinishButton: true, // make finish button enabled always
 	hideButtonsOnDisabled: false, // when the previous/next/finish buttons are disabled, hide them instead?
     errorSteps:[],    // Array Steps with errors
     labelNext:'Próximo',
     labelPrevious:'Anterior',
-    labelFinish:'Finalizar',
+    labelFinish:'Ir para Etapa',
+    labelStart:'Início',
     noForwardJumping: false,
     onLeaveStep: null, // triggers when leaving a step
     onShowStep: null,  // triggers when showing a step
-    onFinish: null  // triggers when Finish button is clicked
+    onFinish: null // triggers when Finish button is clicked
 };
 
 })(jQuery);

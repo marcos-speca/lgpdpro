@@ -1,0 +1,577 @@
+{% extends "app/base_site.html" %}
+
+{% block title %} Dashboard 1 {% endblock title %}
+
+{% block stylesheets %}
+  {{ block.super }}
+{% endblock stylesheets %}
+
+{% block content %}
+  <div class="right_col" role="main">
+    <!-- top tiles -->
+    <div class="row tile_count">
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fa fa-user"></i> Usuários Cadastrados</span>
+        <div class="count">3</div>
+        
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fa fa-clock-o"></i> Tarefas Pendentes</span>
+        <div class="count">18</div>
+        
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fa fa-user"></i> Parceiros Disponíveis</span>
+        <div class="count green">247</div>
+        <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> Novos</span>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fa fa-mortar-board"></i> Horas de Treinamento</span>
+        <div class="count">1.850</div>
+        <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>58% </i> Cumprida</span>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fa fa-file-text-o"></i> Revisões Contratuais</span>
+        <div class="count">126</div>
+        <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>12% </i> Para Conclusão</span>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fa fa-cloud"></i> Gestão de Cookies</span>
+        <div class="count">7,325</div>
+        <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> Aceitos</span>
+      </div>
+    </div>
+    <!-- /top tiles -->
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="x_panel">
+          <div class="x_title">
+            <h2>Visão geral da iniciativa LGPD</h2>
+            <ul class="nav navbar-right panel_toolbox">
+              <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Settings 1</a>
+                  </li>
+                  <li><a href="#">Settings 2</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="close-link"><i class="fa fa-close"></i></a>
+              </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+
+          <div class="x_content">
+
+            <div class="col-md-9 col-sm-9 col-xs-12">
+
+              <ul class="stats-overview">
+                <li>
+                  <span class="name"> % de Andamento </span>
+                  <span class="value text-success"> 75% </span>
+                </li>
+                <li>
+                  <span class="name"> % a Concluir </span>
+                  <span class="value text-warning"> %25 </span>
+                </li>
+                <li class="hidden-phone">
+                  <span class="name"> Duração Estimada </span>
+                  <span class="value text-success"> 18 Meses </span>
+                </li>
+              </ul>
+              <br />
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="x_panel">
+                    <div class="x_title">
+                      <h2>Iniciativas</h2>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+      
+                      <!-- start project list -->
+                      <table class="table table-striped projects">
+                        <thead>
+                          <tr>
+                            <th style="width: 1%">#</th>
+                            <th style="width: 20%">Iniciativa</th>
+                            <th>Membros</th>
+                            <th>Progresso</th>
+                            <th>Status</th>
+                            <th style="width: 20%">Ações</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>#</td>
+                            <td>
+                              <a>Revisar Contratos</a>
+                              <br />
+                              <small>Data Limite 01.12.2020</small>
+                            </td>
+                            <td>
+                              <ul class="list-inline">
+                                <li>
+                                  <img src="/static/images/user.png" class="avatar" alt="Avatar">
+                                </li>
+                                <li>
+                                  <img src="/static/images/user.png" class="avatar" alt="Avatar">
+                                </li>
+                                <li>
+                                  <img src="/static/images/user.png" class="avatar" alt="Avatar">
+                                </li>
+                                <li>
+                                  <img src="/static/images/user.png" class="avatar" alt="Avatar">
+                                </li>
+                              </ul>
+                            </td>
+                            <td class="project_progress">
+                              <div class="progress progress_sm">
+                                <div class="progress-bar progress-bar-danger" role="progressbar" data-transitiongoal="18"></div>
+                              </div>
+                              <small>18% concluída</small>
+                            </td>
+                            <td>
+                              <button type="button" class="btn btn-danger btn-xs">Atrasado</button>
+                            </td>
+                            <td>
+                              <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> Visualizar </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>#</td>
+                            <td>
+                              <a>Montar Treinamento Inicial</a>
+                              <br />
+                              <small>Início em 01.01.2021</small>
+                            </td>
+                            <td>
+                              <ul class="list-inline">
+                                <li>
+                                  <img src="/static/images/user.png" class="avatar" alt="Avatar">
+                                </li>
+                                <li>
+                                  <img src="/static/images/user.png" class="avatar" alt="Avatar">
+                                </li>
+                              </ul>
+                            </td>
+                            <td class="project_progress">
+                              <div class="progress progress_sm">
+                                <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="47"></div>
+                              </div>
+                              <small>47% Concluído</small>
+                            </td>
+                            <td>
+                              <button type="button" class="btn btn-success btn-xs">No Prazo</button>
+                            </td>
+                            <td>
+                              <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> Visualizar </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>#</td>
+                            <td>
+                              <a>Preencher Wizard LGPD</a>
+                              <br />
+                              <small>Início 01.02.2021</small>
+                            </td>
+                            <td>
+                              <ul class="list-inline">
+                                <li>
+                                  <img src="/static/images/user.png" class="avatar" alt="Avatar">
+                                </li>
+                                <li>
+                                  <img src="/static/images/user.png" class="avatar" alt="Avatar">
+                                </li>
+                                <li>
+                                  <img src="/static/images/user.png" class="avatar" alt="Avatar">
+                                </li>
+                              </ul>
+                            </td>
+                            <td class="project_progress">
+                              <div class="progress progress_sm">
+                                <div class="progress-bar progress-bar-warning" role="progressbar" data-transitiongoal="77"></div>
+                              </div>
+                              <small>77% Concluído</small>
+                            </td>
+                            <td>
+                              <button type="button" class="btn btn-warning btn-xs">Atenção</button>
+                            </td>
+                            <td>
+                              <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> Visualizar </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <!-- end project list -->
+        
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Gráfico
+                <div id="mainb" style="height:250px;"></div> 
+              -->
+
+              <div>
+
+                <h4>Ultimas Atividades</h4>
+
+                <!-- end of user messages -->
+                <ul class="messages">
+                  <li>
+                    <img src="/static/images/img.jpg" class="avatar" alt="Avatar">
+                    <div class="message_date">
+                      <h3 class="date text-info">24</h3>
+                      <p class="month">Maio</p>
+                    </div>
+                    <div class="message_wrapper">
+                      <h4 class="heading">José da Silva</h4>
+                      <blockquote class="message">Enviado os documentos necessários para a auditoria sobre LGPD para os Fornecedores.</blockquote>
+                      <br />
+                      <p class="url">
+                        <span class="fs1 text-info" aria-hidden="true" data-icon=""></span>
+                        <a href="#"><i class="fa fa-paperclip"></i> Formulario_de_Avaliacao.docx </a>
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="/static/images/img.jpg" class="avatar" alt="Avatar">
+                    <div class="message_date">
+                      <h3 class="date text-error">21</h3>
+                      <p class="month">Maio</p>
+                    </div>
+                    <div class="message_wrapper">
+                      <h4 class="heading">José Alfredo</h4>
+                      <blockquote class="message">Por favor me enviar todas as pendências existentes no projeto para que eu possa elaborar o Status Report. </blockquote>
+                      <br />
+                      <p class="url">
+                        <span class="fs1" aria-hidden="true" data-icon=""></span>
+                        <a href="#" data-original-title="">Download</a>
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="/static/images/user.png" class="avatar" alt="Avatar">
+                    <div class="message_date">
+                      <h3 class="date text-info">21</h3>
+                      <p class="month">Maio</p>
+                    </div>
+                    <div class="message_wrapper">
+                      <h4 class="heading">Fornecedor</h4>
+                      <blockquote class="message">Gostaria de solicitar uma reunião para discutirmos as cláusulas do projeto de implantação da LGPD visto que nossa natureza de prestação de serviço demanda ajustes ASAP. Aguardo Retorno.</blockquote>
+                      <br />
+                      <p class="url">
+                        <span class="fs1 text-info" aria-hidden="true" data-icon=""></span>
+                        <a href="#"><i class="fa fa-calendar"></i> icalendar </a>
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+                <!-- end of user messages -->
+
+
+              </div>
+
+
+            </div>
+
+            <!-- start project-detail sidebar -->
+            <div class="col-md-3 col-sm-3 col-xs-12">
+
+              <section class="panel">
+
+                <div class="x_title">
+                  <h2>Descrição do Projeto</h2>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="panel-body">
+                  <h3 class="green"><i class="fa fa-shield"></i> LGPD-Pro</h3>
+
+                  <p>Visão geral do Projeto de Implantação de LGPD. Quadro para acompanhamento das principais atividades, bem como visão geral do fluxo de implantação e comunicação com os envolvidos.</p>
+                  <br />
+
+                  <div class="project_detail">
+
+                    <p class="title">Empresa</p>
+                    <p>Cliente Excelente S/A</p>
+                    <p class="title">Líder do Projeto</p>
+                    <p>José Alfredo</p>
+                  </div>
+
+                  <br />
+                  <h5>Arquivos</h5>
+                  <ul class="list-unstyled project_files">
+                    <li><a href=""><i class="fa fa-file-word-o"></i> Template_Contratual_v1.docx</a>
+                    </li>
+                    <li><a href=""><i class="fa fa-file-pdf-o"></i>Politica de Privacidade.pdf</a>
+                    </li>
+                    <li><a href=""><i class="fa fa-file-excel-o"></i> Formulário de Cadastro.xlsx</a>
+                    </li>
+                    <li><a href=""><i class="fa fa-picture-o"></i> Logo_da_empresa.png</a>
+                    </li>
+                    <li><a href=""><i class="fa fa-file-word-o"></i> Contrato-10_12_2014.docx</a>
+                    </li>
+                  </ul>
+                  <br />
+
+                  <div class="text-center mtop20">
+                    <a href="#" class="btn btn-sm btn-primary">Adicionar Arquivo</a>
+                    <a href="#" class="btn btn-sm btn-warning">Reportar Incidente</a>
+                  </div>
+                </div>
+
+              </section>
+
+            </div>
+            <!-- end project-detail sidebar -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6 col-xs-12 hide">
+      <div class="x_panel fixed_height_320">
+        <div class="x_title">
+          <h2>Perfil da Empresa</h2>
+          <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li><a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+          <div class="dashboard-widget-content">
+            <ul class="quick-list">
+              <li><i class="fa fa-line-chart"></i><a href="#">Acompanhamento</a></li>
+              <li><i class="fa fa-thumbs-up"></i><a href="#">Favoritos</a></li>
+              <li><i class="fa fa-calendar-o"></i><a href="#">Atividades</a></li>
+              <li><i class="fa fa-cog"></i><a href="#">Configurações</a></li>
+              <li><i class="fa fa-area-chart"></i><a href="#">Estatísticas</a></li>
+            </ul>
+            <div class="sidebar-widget">
+              <h4>Conclusão das Pendências</h4>
+              <canvas width="150" height="80" id="chart_gauge_02" class="" style="width: 160px; height: 100px;"></canvas>
+              <div class="goal-wrapper">
+                <span class="gauge-value pull-left"></span>
+                <span id="gauge-text2" class="gauge-value pull-left">0</span>
+                <span id="goal-text2" class="goal-value pull-right">%100</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wizard Passo a Passo-->
+    <div class="row hide">
+
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+          <div class="x_title">
+            <h2>LGPD-Pro Wizard <small>instruções de preenchimento</small></h2>
+            <ul class="nav navbar-right panel_toolbox">
+              <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Configurações 1</a>
+                  </li>
+                  <li><a href="#">Configurações 2</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="close-link"><i class="fa fa-close"></i></a>
+              </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+          <div class="x_content">
+
+
+            <!-- Smart Wizard -->
+            <p>O Passo-a-passo de implantação da LGPD desenvolvido pela empresa está dividido em 4 etapas conforme abaixo. Nesta página você irá ter um guia para preenchimento e acesso as etapas.</p>
+            <div id="wizard" class="form_wizard wizard_horizontal">
+              <ul class="wizard_steps">
+                <li>
+                  <a href="#step-1">
+                    <span class="step_no">1</span>
+                    <span class="step_descr">
+                                      Passo 1<br />
+                                      <small>Dados Cadastrais</small>
+                                  </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#step-2">
+                    <span class="step_no">2</span>
+                    <span class="step_descr">
+                                      Passo 2<br />
+                                      <small>Diagnóstico LGPD</small>
+                                  </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#step-3">
+                    <span class="step_no">3</span>
+                    <span class="step_descr">
+                                      Passo 3<br />
+                                      <small>Fluxo de Implantação</small>
+                                  </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#step-4">
+                    <span class="step_no">4</span>
+                    <span class="step_descr">
+                                      Passo 4<br />
+                                      <small>Acompanhamento da Implantação</small>
+                                  </span>
+                  </a>
+                </li>
+              </ul>
+              <div id="step-1">
+                <h2 class="StepTitle">Etapa 1 - Dados Cadastrais</h2>
+                <p>
+                  Nesta etapa os dados cadastrais deverão ser preenchidos. Tanto os dados Cadastrais, quanto informações das pessoas envolvidas. 
+                </p>
+                <p>
+                  Quanto mais completas as informações, mais corretamente nossos algoritmos irão sugerir etapas para uma implementação correta dos protocolos da LGPD. 
+                </p>          
+              </div>
+
+              <div id="step-2">
+                <h2 class="StepTitle">Etapa 2 - </h2>
+                <p>
+                  Nesta etapa os dados cadastrais deverão ser preenchidos. Tanto os dados Cadastrais, quanto informações das pessoas envolvidas. 
+                </p>
+                <p>
+                  Quanto mais completas as informações, mais corretamente nossos algoritmos irão sugerir etapas para uma implementação correta dos protocolos da LGPD. 
+                </p>          
+
+        
+              </div>
+              
+              <div id="step-3">
+                <h2 class="StepTitle">Step 3 Content</h2>
+                <p>
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                  in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+              
+              <div id="step-4">
+                <h2 class="StepTitle">Step 4 Content</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                  in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                  in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+
+            </div>
+            <!-- End SmartWizard Content -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Modal Bem Vindo-->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true" id="modal-welcome">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+            </button>
+            <h3 class="modal-title" id="myModalLabel">Bem Vindo!</h3>
+          </div>
+          <div class="modal-body">
+            <h4>Bem vindo a LGPD-Pro</h4>
+            <p>A LGPD-Pro permite a adequação a lei geral de proteção de dados através de um Passo-A-Passo intuitivo e automático consistentem em 4 etapas: </p>
+            <ul>
+              <li>1. Etapa de Dados Cadastrais</li>
+              <li>2. Etapa de Diagnóstico</li>
+              <li>3. Etapa de Fluxo de Implantação</li>
+              <li>4. Etapa de Acompanhamento das Atividades</li>
+            </ul>
+            <p>Para iniciar o fluxo, clique em "Iniciar Fluxo" ou "Fechar" para ir para a home da plataforma.</p>
+            <p>Você poderá acessar as etapas a qualquer momento. </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            <a href="lgpd_etapa_1.html"><button type="button" class="btn btn-primary">Iniciar Fluxo</button></a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+{% endblock content %}
+
+{% block javascripts %}
+  {{ block.super}}
+  
+  <script type="text/javascript">
+    $(window).on('load', function() {
+        $('#modal-welcome').modal('show');
+    });
+  </script>
+  
+  <!-- Chart.js -->
+  <script src="/static/vendors/Chart.js/dist/Chart.min.js"></script>
+  <!-- gauge.js -->
+  <script src="/static/vendors/gauge.js/dist/gauge.js"></script>
+  <!-- Skycons -->
+  <script src="/static/vendors/skycons/skycons.js"></script>
+  <!-- Flot -->
+  <script src="/static/vendors/Flot/jquery.flot.js"></script>
+  <script src="/static/vendors/Flot/jquery.flot.pie.js"></script>
+  <script src="/static/vendors/Flot/jquery.flot.time.js"></script>
+  <script src="/static/vendors/Flot/jquery.flot.stack.js"></script>
+  <script src="/static/vendors/Flot/jquery.flot.resize.js"></script>
+  <!-- Flot plugins -->
+  <script src="/static/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+  <script src="/static/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+  <script src="/static/vendors/flot.curvedlines/curvedLines.js"></script>
+  <!-- DateJS -->
+  <script src="/static/vendors/DateJS/build/date.js"></script>
+  <!-- JQVMap -->
+  <script src="/static/vendors/jqvmap/dist/jquery.vmap.js"></script>
+  <script src="/static/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+  <script src="/static/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+
+  <!-- jQuery Smart Wizard -->
+  <script src="/static/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+
+  <!-- jquery.inputmask -->
+  <script src="/static/vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+
+  <!-- ECharts -->
+  <script src="/static/vendors/echarts/dist/echarts.min.js"></script>
+
+{% endblock javascripts %}
