@@ -540,11 +540,22 @@
 
       $(document).ready(function() {
           
-            if (document.cookie.indexOf("FooBar=true") == -1) {
-              document.cookie = "FooBar=true; max-age=86400"; // 86400: seconds in a day
+            if (document.cookie.indexOf("PrimeiroAcesso=true") == -1) {
+              document.cookie = "PrimeiroAcesso=true; max-age=900"; // 15 Minutos
               $('#modal-welcome').modal('show');
             }
+
+            $("#exibe_templates").on('click',function(){
+                
+                if($("#menu_templates").hasClass("hide"))
+                {
+                  $("#menu_templates").removeClass("hide");
+                }else{
+                  $("#menu_templates").addClass("hide");
+                }
+            });
       });
+
   </script>
   
   <!-- Chart.js -->
