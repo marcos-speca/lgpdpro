@@ -23,8 +23,7 @@ function SmartWizard(target, options) {
     this.buttons = {
         next : $('<a>'+options.labelNext+'</a>').attr("href","#").addClass("buttonNext"),
         previous : $('<a>'+options.labelPrevious+'</a>').attr("href","#").addClass("buttonPrevious"),
-        finish  : $('<a>'+options.labelFinish+'</a>').attr("href","#").addClass("buttonFinish"),
-        start  : $('<a>'+options.labelStart+'</a>').attr("href","#").addClass("buttonNext")
+        finish  : $('<a>'+options.labelFinish+'</a>').attr("href","#").addClass("buttonFinish")
     };
 
     /*
@@ -53,7 +52,7 @@ function SmartWizard(target, options) {
         $this.elmStepContainer.append(allDivs);
         elmActionBar.append($this.loader);
         $this.target.append($this.elmStepContainer);
-        elmActionBar.append($this.buttons.start)
+        elmActionBar //.append($this.buttons.start)
                     .append($this.buttons.finish)
                     .append($this.buttons.next)
                     .append($this.buttons.previous);
@@ -441,8 +440,7 @@ $.fn.smartWizard.defaults = {
     errorSteps:[],    // Array Steps with errors
     labelNext:'Próximo',
     labelPrevious:'Anterior',
-    labelFinish:'Ir para Etapa',
-    labelStart:'Início',
+    labelFinish:'Gravar Dados',
     noForwardJumping: false,
     onLeaveStep: null, // triggers when leaving a step
     onShowStep: null,  // triggers when showing a step

@@ -4,6 +4,9 @@
 
 {% block stylesheets %}
   {{ block.super }}
+    <!-- FullCalendar -->
+    <link href="/static/vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+    <link href="/static/vendors/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
 {% endblock stylesheets %}
 
 {% block content %}
@@ -67,12 +70,361 @@
             <div class="clearfix"></div>
           </div>
           <div class="x_content">
-                
+
+            <p>A plataforma LGPD-Pro configurou um fluxo de implantação da LGPD com base nos dados informados em etapas anteriores. </p>
+            <p>Agora é preciso realizar algumas configurações para iniciar o processo. </p>
+            <p>Siga o passo-a-passo abaixo e realize suas configurações</p>
+
+            <!-- Wizard -->
+            <div id="wizard_verticle" class="form_wizard wizard_verticle">
+              <ul class="list-unstyled wizard_steps">
+                <li>
+                  <a href="#step-11">
+                    <span class="step_no">1</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#step-22">
+                    <span class="step_no">2</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#step-33">
+                    <span class="step_no">3</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#step-44">
+                    <span class="step_no">4</span>
+                  </a>
+                </li>
+              </ul>
+
+              <div id="step-11">
+                <h2 class="StepTitle">Configurações Gerais</h2>
+
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12">Tipo de Implantação</label>
+                          <div class="col-md-9 col-sm-9 col-xs-12">
+                            <select class="form-control">
+                              <option>Selecione uma Opção</option>
+                              <option>Implantação Geral </option>
+                              <option>Implantação Rápida</option>
+                              <option>Immplantação Focada</option>
+                              <option>Implantação Customizada</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p>&nbsp;</p>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12">Áreas Envolvidas</label>
+                          <div class="col-md-9 col-sm-9 col-xs-12">
+                            <select class="select2_multiple form-control" multiple="multiple">
+                              <option>Tecnologia da Informação</option>
+                              <option>Recursos Humanos</option>
+                              <option>Jurídico</option>
+                              <option>Compras</option>
+                              <option>Comercial</option>
+                              <option>Marketing</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="form-group">
+                          <label class="col-md-9 col-sm-9 col-xs-12 control-label">Opções Adicionais
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value=""> Enviar email de Kick-off aos envolvidos
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value=""> Permitir Alterações durante o projeto
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
 
               </div>
-           </div>
-            <!-- End SmartWizard Content -->
+              
+              <div id="step-22">
+                <h2 class="StepTitle">Formulários de Pesquisa</h2>
+              
+                <div class="col-md-12 col-sm-6 col-xs-12">
+                  <div class="x_panel">
+                    <div class="x_title">
+                      <h2><small>Selecione os Formulários a serem aplicados</small></h2>
+                      <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-plus"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Novo Formulário</a>
+                            </li>
+                            <li><a href="#">Importar do Market Place</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+        
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th><input type="checkbox"></input></th>
+                            <th>#</th>
+                            <th>Descrição</th>
+                            <th>Area Responsável</th>
+                            <th>Prazo de Conclusão</th>
+                            <th>Ultima Revisão</th>
+                            <th>Ações</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th><input type="checkbox"></input></th>
+                            <th scope="row">1</th>
+                            <td>Mapeamento de Uso de Informações Pessoais</td>
+                            <td>Recursos Humanos</td>
+                            <td>15 dias úteis</td>
+                            <td>25/02/2021 14:52</td>
+                            <td><i class="fa fa-pencil"></i> <i class="fa fa-close"></i></td>
+                          </tr>
+                          <tr>
+                            <th><input type="checkbox"></input></th>
+                            <th scope="row">2</th>
+                            <td>Mapeamento Fornecedores</td>
+                            <td>Compras</td>
+                            <td>7 dias úteis</td>
+                            <td>25/02/2021 14:52</td>
+                            <td><i class="fa fa-pencil"></i> <i class="fa fa-close"></i></td>
+                          </tr>
+                          <tr>
+                            <th><input type="checkbox"></input></th>
+                            <th scope="row">3</th>
+                            <td>Mapeamento Iniciativas Marketing</td>
+                            <td>Marketing</td>
+                            <td>7 dias úteis</td>
+                            <td>25/02/2021 14:52</td>
+                            <td><i class="fa fa-pencil"></i> <i class="fa fa-close"></i></td>
+                          </tr>
 
+                        </tbody>
+                      </table>
+        
+                    </div>
+                  </div>
+                </div>
+              </div>
+                  
+
+              <div id="step-33">
+                <h2 class="StepTitle">Treinamentos para Aplicar</h2>
+                <div class="col-md-12 col-sm-6 col-xs-12">
+                  <div class="x_panel">
+                    <div class="x_title">
+                      <h2><small>Selecione os treinamentos a serem aplicados</small></h2>
+                      <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-plus"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Novo Treinamento</a>
+                            </li>
+                            <li><a href="#">Adquirir do Market Place</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+        
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th><input type="checkbox"></input></th>
+                            <th>#</th>
+                            <th>Treinamento</th>
+                            <th>Público</th>
+                            <th>Carga Horária</th>
+                            <th>Responsável</th>
+                            <th>Ações</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th><input type="checkbox"></input></th>
+                            <th scope="row">1</th>
+                            <td>Visão Geral LGPD</td>
+                            <td>Todas Areas</td>
+                            <td>4 hrs</td>
+                            <td>DPO</td>
+                            <td><i class="fa fa-pencil"></i> <i class="fa fa-close"></i></td>
+                          </tr>
+                          <tr>
+                            <th><input type="checkbox"></input></th>
+                            <th scope="row">2</th>
+                            <td>Políticas de Privacidade</td>
+                            <td>Vendas / Marketing</td>
+                            <td>2 hrs</td>
+                            <td>DPO ou Jurídico</td>
+                            <td><i class="fa fa-pencil"></i> <i class="fa fa-close"></i></td>
+                          </tr>
+                          <tr>
+                            <th><input type="checkbox"></input></th>
+                            <th scope="row">3</th>
+                            <td>Manipulação Dados Pessoais</td>
+                            <td>Todas Areas</td>
+                            <td>8 hrs</td>
+                            <td>DPO</td>
+                            <td><i class="fa fa-pencil"></i> <i class="fa fa-close"></i></td>
+                          </tr>
+                          <tr>
+                            <th><input type="checkbox"></input></th>
+                            <th scope="row">4</th>
+                            <td>Preenchimento Formulários</td>
+                            <td>Todas Areas</td>
+                            <td>30 min</td>
+                            <td>DPO</td>
+                            <td><i class="fa fa-pencil"></i> <i class="fa fa-close"></i></td>
+                          </tr>
+                        </tbody>
+                      </table>
+        
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="step-44">
+                <h2 class="StepTitle">Cronograma de Implantação</h2>
+                
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="x_panel">
+                      <div class="x_title">
+                        <h2>Inserir aqui os eventos do projeto (Preenchimento de Formulários, Treinamentos e Deadlines)</small></h2>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="x_content">
+          
+                        <div id='calendar'></div>
+          
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+
+            
+            </div>
+
+
+              <!-- Botões 
+              <div class="ln_solid"></div>-->
+              <div class="form-group">
+                <div class="col-md-12 col-sm-12 col-xs-12 ">
+                  <a href="lgpd_home.html"><button type="button" class="btn btn-warning">Cancelar</button></a> 
+                  <a href="#"><button type="button" class="btn btn-success">Salvar Dados</button></a>
+                  <a href="lgpd_etapa_2.html"><button type="button" class="btn btn-info">Etapa Anterior</button></a>
+                  <a href="lgpd_etapa_4.html"><button type="button" class="btn btn-primary">Próxima Etapa</button></a>
+                </div>
+              </div>
+
+                  <!-- calendar modal -->
+    <div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title" id="myModalLabel">Novo Evento</h4>
+          </div>
+          <div class="modal-body">
+            <div id="testmodal" style="padding: 5px 20px;">
+              <form id="antoform" class="form-horizontal calender" role="form">
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Título</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="title" name="title">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Descrição</label>
+                  <div class="col-sm-9">
+                    <textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary antosubmit">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title" id="myModalLabel2">Editar Evento</h4>
+          </div>
+          <div class="modal-body">
+
+            <div id="testmodal2" style="padding: 5px 20px;">
+              <form id="antoform2" class="form-horizontal calender" role="form">
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Título</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="title2" name="title2">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Descrição</label>
+                  <div class="col-sm-9">
+                    <textarea class="form-control" style="height:55px;" id="descr2" name="descr"></textarea>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary antosubmit2">Salvar Alterações</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
+    <div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
+    
           </div>
         </div>
       </div>
@@ -111,5 +463,9 @@
 
     <!-- jquery.inputmask -->
     <script src="/static/vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+
+    <!-- FullCalendar -->
+  <script src="/static/vendors/moment/min/moment.min.js"></script>
+  <script src="/static/vendors/fullcalendar/dist/fullcalendar.min.js"></script>
 
 {% endblock javascripts %}

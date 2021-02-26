@@ -435,7 +435,7 @@
                     <span class="step_no">4</span>
                     <span class="step_descr">
                                       Passo 4<br />
-                                      <small>Acompanhamento da Implantação</small>
+                                      <small>Iniciar Execução</small>
                                   </span>
                   </a>
                 </li>
@@ -513,9 +513,9 @@
             <p>A LGPD-Pro permite a adequação a lei geral de proteção de dados através de um Passo-A-Passo intuitivo e automático consistentem em 4 etapas: </p>
             <ul>
               <li>1. Etapa de Dados Cadastrais</li>
-              <li>2. Etapa de Diagnóstico</li>
-              <li>3. Etapa de Fluxo de Implantação</li>
-              <li>4. Etapa de Acompanhamento das Atividades</li>
+              <li>2. Etapa de Diagnóstico Inicial</li>
+              <li>3. Etapa de Configuração do Fluxo</li>
+              <li>4. Etapa de Inicio da Execução</li>
             </ul>
             <p>Para iniciar o fluxo, clique em "Iniciar Fluxo" ou "Fechar" para ir para a home da plataforma.</p>
             <p>Você poderá acessar as etapas a qualquer momento. </p>
@@ -537,9 +537,14 @@
   {{ block.super}}
   
   <script type="text/javascript">
-    $(window).on('load', function() {
-        $('#modal-welcome').modal('show');
-    });
+
+      $(document).ready(function() {
+          
+            if (document.cookie.indexOf("FooBar=true") == -1) {
+              document.cookie = "FooBar=true; max-age=86400"; // 86400: seconds in a day
+              $('#modal-welcome').modal('show');
+            }
+      });
   </script>
   
   <!-- Chart.js -->
