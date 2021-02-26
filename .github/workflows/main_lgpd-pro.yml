@@ -1,0 +1,35 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build and deploy container app to Azure Web App - lgpd-pro
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: 'ubuntu-latest'
+
+    steps:
+    - uses: actions/checkout@master
+
+    - uses: azure/docker-login@v1
+      with:
+        login-server: https://index.docker.io/v1/
+        username: ${{ secrets.AzureAppService_ContainerUsername_d417c80e153f4d3599886568778df680 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_969ecaf08ba04dd1915147679484254d }}
+
+    - run: |
+        docker build . -t index.docker.io/${{ secrets.AzureAppService_ContainerUsername_d417c80e153f4d3599886568778df680 }}/marcosspeca/lgpd-pro:${{ github.sha }}
+        docker push index.docker.io/${{ secrets.AzureAppService_ContainerUsername_d417c80e153f4d3599886568778df680 }}/marcosspeca/lgpd-pro:${{ github.sha }}
+
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'lgpd-pro'
+        slot-name: 'production'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_07ef1fba3d9b4e5a94f0be4c1383ccc8 }}
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_d417c80e153f4d3599886568778df680 }}/marcosspeca/lgpd-pro:${{ github.sha }}'
