@@ -8,47 +8,13 @@
 
 {% block content %}
   <div class="right_col" role="main">
-    <!-- top tiles -->
-    <div class="row tile_count hide">
-      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
-        <div class="count">2500</div>
-        <span class="count_bottom"><i class="green">4% </i> From last Week</span>
-      </div>
-      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
-        <div class="count">123.50</div>
-        <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
-      </div>
-      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
-        <div class="count green">2,500</div>
-        <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-      </div>
-      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
-        <div class="count">4,567</div>
-        <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
-      </div>
-      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
-        <div class="count">2,315</div>
-        <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-      </div>
-      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
-        <div class="count">7,325</div>
-        <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-      </div>
-    </div>
-    <!-- /top tiles -->
 
     <div class="row">
 
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
           <div class="x_title">
-            <h2>Etapa 2 <small>Diagnóstico LGPD</small></h2>
+            <h2>Etapa 2 <small>Diagnóstico Inicial LGPD</small></h2>
             <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
               </li>
@@ -78,39 +44,88 @@
     
                   <!-- start accordion -->
                   <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+
                     <div class="panel">
                       <a class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <h4 class="panel-title">Situação Atual</h4>
+                        <h4 class="panel-title">Aspectos Empresariais</h4>
                       </a>
                       <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
 
+                        <div class="panel-body">
+                          
                           <form class="form-horizontal form-label-left">
 
                             <div class="form-group">
-                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">Pergunta 1:</label>
+                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">Sua empresa atende clientes CPF? (B2C) ou CNPJ (B2B)? :</label>
                               <div class="col-md-12 col-sm-9 col-xs-12">
+                                 <p>
+                                  <input type="radio" class="flat" name="p01" id="p01-CPF" value="CPF"  /> CPF (B2C) 
+                                  | <input type="radio" class="flat" name="p01" id="p01-CNPJ" value="CNPJ" />CNPJ (B2B)
+                                  | <input type="radio" class="flat" name="p01" id="p01-DUPLO" value="DUPLO" /> Duas Modalidades (B2B 2 B2C)
+                                  | <input type="radio" class="flat" name="p01" id="p01-NI" value="NI" /> Não Sei Informar
+                                </p>
+                              </div>
+                            </div>
+
+                            <div class="form-group">
+                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">Sua empresa recebe/trata/manipula dados pessoais? :</label>
+                              <div class="col-md-12 col-sm-9 col-xs-12">
+                                 <p>
+                                  <input type="radio" class="flat" name="p02" id="p02-N" value="N"  /> Não 
+                                  | <input type="radio" class="flat" name="p02" id="p02-NI" value="NI" />Não Sei Informar 
+                                  | <input type="radio" class="flat" name="p02" id="p02-S" value="S" /> Sim (Quais?):
+                                </p>
                                 <input type="text" class="form-control" placeholder="">
                               </div>
                             </div>
 
                             <div class="form-group">
-                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">Pergunta 2:</label>
+                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">Sua empresa compartilha/envia dados pessoais a terceiros (Parceiros/Fornecedores)?  :</label>
                               <div class="col-md-12 col-sm-9 col-xs-12">
+                                 <p>
+                                  <input type="radio" class="flat" name="p03" id="p03-N" value="N"  /> Não 
+                                  | <input type="radio" class="flat" name="p03" id="p03-NI" value="NI" />Não Sei Informar 
+                                  | <input type="radio" class="flat" name="p03" id="p03-S" value="S" /> Sim (Quais?):
+                                </p>
                                 <input type="text" class="form-control" placeholder="">
                               </div>
                             </div>
 
                             <div class="form-group">
-                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">Pergunta 3:</label>
+                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">Sua empresa possui canal de atendimento para solicitações de privacidade de dados?  :</label>
                               <div class="col-md-12 col-sm-9 col-xs-12">
+                                 <p>
+                                  <input type="radio" class="flat" name="p04" id="p04-N" value="N"  /> Não 
+                                  | <input type="radio" class="flat" name="p04" id="p04-NI" value="NI" />Não Sei Informar 
+                                  | <input type="radio" class="flat" name="p04" id="p04-S" value="S" /> Sim (Quais?):
+                                </p>
                                 <input type="text" class="form-control" placeholder="">
                               </div>
                             </div>
-                            
+
+                            <div class="form-group">
+                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">Na sua visão quais áreas da empresa devem ser envolvidas no processo?  :</label>
+                              <div class="col-md-12 col-sm-9 col-xs-12">
+                                <div class="col-md-6 col-sm-9 col-xs-12">
+                                  <small> Selecione todas áreas aplicáveis (segure tecla ctrl)</small>
+                                  <select class="select2_multiple form-control" multiple="multiple">
+                                    <option>Jurídico</option>
+                                    <option>Tecnologia da Informação</option>
+                                    <option>Recursos Humanos</option>
+                                    <option>Marketing </option>
+                                    <option>Vendas</option>
+                                    <option>Diretoria Executiva</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+
+
                           </form>
 
                         </div>
+
+                      
                       </div>
                     </div>
 
@@ -120,66 +135,191 @@
                         <h4 class="panel-title">Ações de Adequação</h4>
                       </a>
                       <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                        <div class="panel-body">
 
+                        <div class="panel-body">
                           <form class="form-horizontal form-label-left">
 
                             <div class="form-group">
-                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">Pergunta 1:</label>
+                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">Já houve alguma iniciativa/ação de implantação da LGPD?:</label>
                               <div class="col-md-12 col-sm-9 col-xs-12">
+                                 <p>
+                                  <input type="radio" class="flat" name="p06" id="p06-N" value="N"  /> Não 
+                                  | <input type="radio" class="flat" name="p06" id="p06-NI" value="NI" />Não Sei Informar 
+                                  | <input type="radio" class="flat" name="p06" id="p06-S" value="S" /> Sim (Quais?):
+                                </p>
                                 <input type="text" class="form-control" placeholder="">
                               </div>
                             </div>
 
                             <div class="form-group">
-                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">Pergunta 2:</label>
+                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">Existe alguma pessoa designada como responsável/DPO?:</label>
                               <div class="col-md-12 col-sm-9 col-xs-12">
+                                <p>
+                                  <input type="radio" class="flat" name="p07" id="p07-N" value="N"  /> Não 
+                                  | <input type="radio" class="flat" name="p07" id="p07-NI" value="NI" />Não Sei Informar 
+                                  | <input type="radio" class="flat" name="p07" id="p07-S" value="S" /> Sim (Quem? - Informe nome/email):
+                                </p>
+                                <input type="text" class="form-control" placeholder="">
+
+                              </div>
+                            </div>
+
+                            <div class="form-group">
+                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">Sua empresa já possui apoio de escritórios de advocacia / consultoria de LGPD? :</label>
+                              <div class="col-md-12 col-sm-9 col-xs-12">
+                                <p>
+                                  <input type="radio" class="flat" name="p08" id="p08-N" value="N"  /> Não 
+                                  | <input type="radio" class="flat" name="p08" id="p08-NI" value="NI" />Não Sei Informar 
+                                  | <input type="radio" class="flat" name="p08" id="p08-S" value="S" /> Sim (Quais? - Informe nomes dos parceiros):
+                                </p>
                                 <input type="text" class="form-control" placeholder="">
                               </div>
                             </div>
 
                             <div class="form-group">
-                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">Pergunta 3:</label>
+                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">Já foram mapeados os usos das informações pessoais? :</label>
                               <div class="col-md-12 col-sm-9 col-xs-12">
+                                <p>
+                                  <input type="radio" class="flat" name="p09" id="p09-N" value="N" /> Não 
+                                  | <input type="radio" class="flat" name="p09" id="p09-NI" value="NI" />Não Sei Informar 
+                                  | <input type="radio" class="flat" name="p09" id="p09-S" value="S" /> Sim (Quais? - Informe os processos mapeados):
+                                </p>
                                 <input type="text" class="form-control" placeholder="">
                               </div>
                             </div>
 
+
+                            <div class="form-group">
+                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right"> Houve algum treinamento para as pessoas envolvidas? :</label>
+                              <div class="col-md-12 col-sm-9 col-xs-12">
+                                <p>
+                                  <input type="radio" class="flat" name="p10" id="p10-N" value="N"/> Não 
+                                  | <input type="radio" class="flat" name="p10" id="p10-NI" value="NI" />Não Sei Informar 
+                                  | <input type="radio" class="flat" name="p10" id="p10-S" value="S" /> Sim (Quais? - Informe os treinamentos realizados):
+                                </p>
+                                <input type="text" class="form-control" placeholder="">
+                              </div>
+                            </div>
+
+                            <div class="form-group">
+                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right"> Existem políticas de tratamento de dados pessoais já definidos? :</label>
+                              <div class="col-md-12 col-sm-9 col-xs-12">
+                                <p>
+                                  <input type="radio" class="flat" name="p11" id="p11-N" value="N" /> Não 
+                                  | <input type="radio" class="flat" name="p11" id="p11-NI" value="NI" />Não Sei Informar 
+                                  | <input type="radio" class="flat" name="p11" id="p11-S" value="S" /> Sim (Informe link para Políticas):
+                                </p>
+                                <input type="text" class="form-control" placeholder="">
+                              </div>
+                            </div>
 
                           </form>
 
                         </div>
+
+                      
                       </div>
                     </div>
+
+
                     <div class="panel">
                       <a class="panel-heading collapsed" role="tab" id="headingThree" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <h4 class="panel-title">Questões de Negócio</h4>
+                        <h4 class="panel-title">Aspectos de TI/Tecnologia</h4>
                       </a>
                       <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                         <div class="panel-body">
-                          
+
                           <form class="form-horizontal form-label-left">
 
                             <div class="form-group">
-                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">Pergunta 1:</label>
+                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right"> Existe equipe de TI ? :</label>
                               <div class="col-md-12 col-sm-9 col-xs-12">
+                                 <p>
+                                  <input type="radio" class="flat" name="p12" id="p12-N" value="N"  /> Não 
+                                  | <input type="radio" class="flat" name="p12" id="p12-NI" value="NI" />Não Sei Informar 
+                                  | <input type="radio" class="flat" name="p12" id="p12-SI" value="S" /> Sim (Interna)
+                                  | <input type="radio" class="flat" name="p12" id="p12-ST" value="S" /> Sim (Terceirizada)
+                                </p>
+                              </div>
+                            </div>
+
+
+                            <div class="form-group">
+                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">  Há envolvimento da Equipe da TI?  :</label>
+                              <div class="col-md-12 col-sm-9 col-xs-12">
+                                <p>
+                                  <input type="radio" class="flat" name="p13" id="p13-N" value="N" /> Não 
+                                  | <input type="radio" class="flat" name="p13" id="p13-NI" value="NI" />Não Sei Informar 
+                                  | <input type="radio" class="flat" name="p13" id="p13-S" value="S" /> Sim (Informe os detalhes):
+                                </p>
                                 <input type="text" class="form-control" placeholder="">
                               </div>
                             </div>
 
                             <div class="form-group">
-                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">Pergunta 2:</label>
+                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">  Existe equipe de Segurança da Informação?   :</label>
                               <div class="col-md-12 col-sm-9 col-xs-12">
-                                <input type="text" class="form-control" placeholder="">
+                                <p>
+                                  <input type="radio" class="flat" name="p14" id="p14-N" value="N"  /> Não 
+                                  | <input type="radio" class="flat" name="p14" id="p14-NI" value="NI" />Não Sei Informar 
+                                  | <input type="radio" class="flat" name="p14" id="p14-SI" value="S" /> Sim (Interna)
+                                  | <input type="radio" class="flat" name="p14" id="p14-ST" value="S" /> Sim (Terceirizada)
+                                </p>
                               </div>
                             </div>
 
                             <div class="form-group">
-                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">Pergunta 3:</label>
+                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">  Há envolvimento da Equipe da Segurança da Informação?  :</label>
                               <div class="col-md-12 col-sm-9 col-xs-12">
+                                <p>
+                                  <input type="radio" class="flat" name="p15" id="p15-N" value="N" /> Não 
+                                  | <input type="radio" class="flat" name="p15" id="p15-NI" value="NI" />Não Sei Informar 
+                                  | <input type="radio" class="flat" name="p15" id="p15-S" value="S" /> Sim (Informe os detalhes):
+                                </p>
                                 <input type="text" class="form-control" placeholder="">
                               </div>
-                            </div>
+                            </div>                    
+
+                            <div class="form-group">
+                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">Quais sistemas sua empresa utiliza?  :</label>
+                              <div class="col-md-12 col-sm-9 col-xs-12">
+                                <div class="col-md-6 col-sm-9 col-xs-12">
+                                  <small> Selecione os sistemas aplicáveis (segure tecla ctrl)</small>
+                                  <select class="select2_multiple form-control" multiple="multiple">
+                                    <option>Sistema de Gestão ERP</option>
+                                    <option>Sistema de CRM/Vendas</option>
+                                    <option>Sistema de RH/Folha de Pagamento</option>
+                                    <option>Sistemas Externos de Mail Marketing</option>
+                                    <option>Sistema Financeiro/Billing</option>
+                                    <option>Sistemas Desenvolvidos Internamente</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>                    
+
+                            <div class="form-group">
+                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">  Há critérios da LGPD já observados nestes sistemas? :</label>
+                              <div class="col-md-12 col-sm-9 col-xs-12">
+                                <p>
+                                  <input type="radio" class="flat" name="p17" id="p17-N" value="N" /> Não 
+                                  | <input type="radio" class="flat" name="p17" id="p17-NI" value="NI" />Não Sei Informar 
+                                  | <input type="radio" class="flat" name="p17" id="p17-S" value="S" /> Sim (Informe os detalhes):
+                                </p>
+                                <input type="text" class="form-control" placeholder="">
+                              </div>
+                            </div>       
+
+                            <div class="form-group">
+                              <label class=" col-md-12 col-sm-3 col-xs-12 pull-right">  Existem políticas de segurança da informação já definidas?  :</label>
+                              <div class="col-md-12 col-sm-9 col-xs-12">
+                                <p>
+                                  <input type="radio" class="flat" name="p18" id="p18-N" value="N" /> Não 
+                                  | <input type="radio" class="flat" name="p18" id="p18-NI" value="NI" />Não Sei Informar 
+                                  | <input type="radio" class="flat" name="p18" id="p18-S" value="S" /> Sim (Informe os detalhes):
+                                </p>
+                                <input type="text" class="form-control" placeholder="">
+                              </div>
+                            </div>       
 
                           </form>
 
@@ -187,6 +327,7 @@
 
                       </div>
                     </div>
+                    
                   </div>
                   <!-- end of accordion -->
 

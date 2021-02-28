@@ -498,37 +498,6 @@
     </div>
 
     
-    <!-- Modal Bem Vindo-->
-    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true" id="modal-welcome">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
-            </button>
-            <h3 class="modal-title" id="myModalLabel">Bem Vindo!</h3>
-          </div>
-          <div class="modal-body">
-            <h4>Bem vindo a LGPD-Pro</h4>
-            <p>A LGPD-Pro permite a adequação a lei geral de proteção de dados através de um Passo-A-Passo intuitivo e automático consistentem em 4 etapas: </p>
-            <ul>
-              <li>1. Etapa de Dados Cadastrais</li>
-              <li>2. Etapa de Diagnóstico Inicial</li>
-              <li>3. Etapa de Configuração do Fluxo</li>
-              <li>4. Etapa de Inicio da Execução</li>
-            </ul>
-            <p>Para iniciar o fluxo, clique em "Iniciar Fluxo" ou "Fechar" para ir para a home da plataforma.</p>
-            <p>Você poderá acessar as etapas a qualquer momento. </p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-            <a href="lgpd_etapa_1.html"><button type="button" class="btn btn-primary">Iniciar Fluxo</button></a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
 
   </div>
 {% endblock content %}
@@ -536,28 +505,7 @@
 {% block javascripts %}
   {{ block.super}}
   
-  <script type="text/javascript">
 
-      $(document).ready(function() {
-          
-            if (document.cookie.indexOf("PrimeiroAcesso=true") == -1) {
-              document.cookie = "PrimeiroAcesso=true; max-age=900"; // 15 Minutos
-              $('#modal-welcome').modal('show');
-            }
-
-            $("#exibe_templates").on('click',function(){
-                
-                if($("#menu_templates").hasClass("hide"))
-                {
-                  $("#menu_templates").removeClass("hide");
-                }else{
-                  $("#menu_templates").addClass("hide");
-                }
-            });
-      });
-
-  </script>
-  
   <!-- Chart.js -->
   <script src="/static/vendors/Chart.js/dist/Chart.min.js"></script>
   <!-- gauge.js -->

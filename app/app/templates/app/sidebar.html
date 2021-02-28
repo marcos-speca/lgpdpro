@@ -22,33 +22,29 @@
   <!-- sidebar menu -->
   <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
     <div class="menu_section">
-      <h3>General</h3>
+      <h3></h3>
       <ul class="nav side-menu">
 
-        <li><a><i class="fa fa-check-square-o"></i> LGPD Wizard <span class="fa fa-chevron-down"></span></a>
+        <li><a><i class="fa fa-check-square-o"></i> Gestão <span class="fa fa-chevron-down"></span></a>
           <ul class="nav child_menu">
             <li><a href="lgpd_home.html">Home</a></li>
+            <li><a href="gestao_cookies.html">Gestão de Cookies</a></li>
+            <li><a href="documentos_template.html">Documentos Template</a></li>
+            <li><a href="parceiros_fornecedores.html">Parceiros e Fornecedores</a></li>
+            <li><a href="treinamentos_mktplace.html">Marketplace Treinamentos</a></li>
+          </ul>
+        </li>
+
+
+        <li><a><i class="fa fa-gears"></i> LGPD Wizard <span class="fa fa-chevron-down"></span></a>
+          <ul class="nav child_menu">
             <li><a href="lgpd_etapa_1.html">Etapa 1 - Dados Cadastrais</a></li>
-            <li><a href="lgpd_etapa_2.html">Etapa 2 - Diagnósticos</a></li>
+            <li><a href="lgpd_etapa_2.html">Etapa 2 - Diagnóstico</a></li>
             <li><a href="lgpd_etapa_3.html">Etapa 3 - Configuração</a></li>
             <li><a href="lgpd_etapa_4.html">Etapa 4 - Execução</a></li>
           </ul>
         </li>
 
-        <li><a><i class="fa fa-gears"></i> Ferramentas <span class="fa fa-chevron-down"></span></a>
-          <ul class="nav child_menu">
-            <li><a href="gestao_cookies.html">Gestão de Cookies</a></li>
-            <li><a href="documentos_template.html">Documentos Template</a></li>
-            <li><a href="contrato_fornecedores.html">Contrato Fornecedores</a></li>
-          </ul>
-        </li>
-
-        <li><a><i class="fa fa-mortar-board"></i> Treinamentos <span class="fa fa-chevron-down"></span></a>
-          <ul class="nav child_menu">
-            <li><a href="treinamentos_empresa.html">Treinamentos Empresa</a></li>
-            <li><a href="treinamentos_mktplace.html">Marketplace</a></li>
-          </ul>
-        </li>
     </div>
     
 
@@ -159,13 +155,28 @@
     <a data-toggle="tooltip" data-placement="top" title="FullScreen">
       <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
     </a>
-    <a data-toggle="tooltip" data-placement="top" title="Menus Adicionais" id="exibe_templates">
+    <a href="javascript:" data-toggle="tooltip"  data-placement="top" title="Menus Adicionais" id="exibe_templates">
       <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
     </a>
     <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
       <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
     </a>
   </div>
+  <script type="text/javascript">
+
+    function exibeTemplates(){
+      if($("#menu_templates").hasClass("hide"))
+        {
+          $("#menu_templates").removeClass("hide");
+        }else{
+          $("#menu_templates").addClass("hide");
+        }
+    }
+
+  </script>
   <!-- /menu footer buttons -->
+
+
+
 </div>
 
