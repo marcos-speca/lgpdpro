@@ -6,7 +6,8 @@
 
 construir a imagem e subir os containers. 
 ```
-docker-compose -p "lgpd-pro" up -d --build
+docker build . -t marcosspeca/lgpd-pro
+docker run --name lgpd-pro -p 80:80 -d marcosspeca/lgpd-pro
 ```
 
 
