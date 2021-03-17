@@ -11,6 +11,8 @@ docker run --name lgpd-pro -p 80:80 -d marcosspeca/lgpd-pro
 ```
 
 
-Para acessar: [link](http://localhost:8000)
+Para acessar Azure: [link](https://lgpd-pro.azurewebsites.net/)
+
+Para acessar Local: [link](http://localhost/)
 
 
